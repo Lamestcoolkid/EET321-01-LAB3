@@ -19,8 +19,8 @@ Procedure:
  
  <img width="738" height="325" alt="image" src="https://github.com/user-attachments/assets/1ba35e12-2d20-4e43-a337-f7430391f9f9" />
 
-NOTE: Use Blue connections instead of Yellow to avoid overloading R1.
- Fig 1. Circuit
+NOTE: Use Blue connections instead of Yellow to avoid overloading R1
+
 2. Manually adjust R4 over its full range and measure the SCR on time at each setting using the oscilloscope. Record this data.
  
 3. Develop an algorithm to accurately calculate on-time based on the oscilloscope waveform. Consider defining on-time as the interval between when the voltage first drops to 0V to when it reaches its negative peak.  
