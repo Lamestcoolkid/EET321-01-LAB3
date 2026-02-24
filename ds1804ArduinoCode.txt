@@ -1,0 +1,36 @@
+#include <Wire.h>
+
+#define DS1804_ADDRESS 0x28 // Address of the DS1804 digital potentiometer
+
+#define INC_PIN 2 // Connect to the INC pin on DS1804
+#define UD_PIN 3 // Connect to the U/D pin on DS1804
+#define CS_PIN 4 // Connect to the CS pin on DS1804
+
+void setup() {
+  Wire.begin(); // Initialize I2C communication
+  pinMode(INC_PIN, OUTPUT); // Set INC pin as output
+  pinMode(UD_PIN, OUTPUT); // Set U/D pin as output
+  pinMode(CS_PIN, OUTPUT); // Set CS pin as output
+}
+
+void loop() {
+  for (int i = 0; i <= 100; i++) {
+    incrementWiper(i); // Increment wiper position from 0 to 100
+    delay(2000); // Delay for 2 seconds
+  }
+}
+
+void incrementWiper(int value) {
+  digitalWrite(CS_PIN, LOW); // Select the DS1804
+  digitalWrite(UD_PIN, HIGH); // Set U/D pin high for increment mode
+  digitalWrite(INC_PIN, HIGH); // Pulse INC pin to increment wiper position
+  delay(1);
+  digitalWrite(INC_PIN, LOW);
+  delay(1);
+  
+  Wire.beginTransmission(DS1804_ADDRESS); // Start communication with DS1804
+  Wire.write(value); // Send the desired wiper position
+  Wire.endTransmission(); // End communication
+  
+  digitalWrite(CS_PIN, HIGH); // Deselect the DS1804
+}
