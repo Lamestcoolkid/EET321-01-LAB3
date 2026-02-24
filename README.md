@@ -1,6 +1,9 @@
 # EET321-01-LAB3
 EET321 Measurement and Test  ELECTRONICS LAB
 
+https://pctedu-my.sharepoint.com/:x:/g/personal/jab92_pct_edu/IQBj6E_PV0EoQZLyhaA7aUrEAUKGNWQD3hUWbZ2KpQJGtaM?e=Plg32p
+Link to Excel Data Sheet
+
 Lab 3: Characterizing an SCR using Automated Test Equipment 
 Objective:
 The objective of this lab is to characterize the on-time of an SCR (silicon controlled rectifier) circuit using both manual measurements and an automated test routine. Students will set up a circuit with an SCR, use test equipment to measure on-time over a range of resistor values, develop algorithms to calculate on-time, and automate the test process using a microcontroller development board.  
