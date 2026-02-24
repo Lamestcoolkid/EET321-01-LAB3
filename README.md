@@ -17,6 +17,8 @@ Equipment:
 Procedure:
 1. Construct the circuit shown in Figure 1 on a breadboard using the provided components. 
  
+ <img width="738" height="325" alt="image" src="https://github.com/user-attachments/assets/1ba35e12-2d20-4e43-a337-f7430391f9f9" />
+
 NOTE: Use Blue connections instead of Yellow to avoid overloading R1.
  Fig 1. Circuit
 2. Manually adjust R4 over its full range and measure the SCR on time at each setting using the oscilloscope. Record this data.
