@@ -6,9 +6,9 @@
  * via its 3-wire interface (CS, U/D, INC).
  *
  * Pin Assignments:
- *   Pin 2 -> DS1804 CS  (active LOW)
+ *   Pin 4 -> DS1804 CS  (active LOW)
  *   Pin 3 -> DS1804 U/D (HIGH = Up, LOW = Down)
- *   Pin 4 -> DS1804 INC (falling edge increments/decrements)
+ *   Pin 2 -> DS1804 INC (falling edge increments/decrements)
  *
  * Serial Commands (9600 baud):
  *   "MAX"     -> Set wiper to position 99 (full 10kΩ)
@@ -27,9 +27,9 @@
  */
 
 // ── Pin definitions ──────────────────────────────────────────────────────────
-const int PIN_CS  = 2;
+const int PIN_CS  = 4;
 const int PIN_UD  = 3;
-const int PIN_INC = 4;
+const int PIN_INC = 2;
 
 // ── State ────────────────────────────────────────────────────────────────────
 int currentPos = 0;  // Unknown at startup; will be zeroed on init
